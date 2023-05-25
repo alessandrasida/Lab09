@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.borders.FXMLController">
+<BorderPane prefHeight="296.0" prefWidth="488.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.borders.FXMLController">
    <top>
       <Label text="Country Borders" BorderPane.alignment="CENTER">
          <font>
@@ -24,6 +25,12 @@
    <center>
       <VBox spacing="5.0" BorderPane.alignment="CENTER">
          <children>
+            <HBox prefHeight="19.0" prefWidth="478.0" translateY="5.0">
+               <children>
+                  <ComboBox fx:id="cmbBox" prefWidth="150.0" translateX="75.0" />
+                  <Button mnemonicParsing="false" onAction="#CercaStati" text="Stati raggiungibili" translateX="100.0" />
+               </children>
+            </HBox>
             <HBox alignment="CENTER_LEFT" spacing="5.0">
                <children>
                   <Label prefWidth="60.0" text="Anno:">
@@ -31,7 +38,7 @@
                         <Insets left="10.0" />
                      </HBox.margin></Label>
                   <TextField fx:id="txtAnno" alignment="TOP_LEFT" prefWidth="150.0" />
-                  <Button mnemonicParsing="false" onAction="#doCalcolaConfini" text="Calcola confini">
+                  <Button mnemonicParsing="false" onAction="#doCalcolaConfini" text="  Calcola  confini  ">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin></Button>
@@ -42,7 +49,7 @@
             </HBox>
             <TextArea fx:id="txtResult" editable="false" wrapText="true">
                <VBox.margin>
-                  <Insets top="10.0" />
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="10.0" />
                </VBox.margin></TextArea>
          </children>
          <padding>
@@ -51,4 +58,3 @@
       </VBox>
    </center>
 </BorderPane>
-
